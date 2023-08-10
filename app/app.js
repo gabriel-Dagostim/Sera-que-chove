@@ -4,6 +4,9 @@ const band2 = "/flat/64.png";
 
 const cityInput = document.querySelector("#city-input");
 const searchBtn = document.querySelector("#search")
+const body = document.body;
+
+/* Seleção de */
 
 const cityElement = document.querySelector("#city");
 const temperatureCity = document.querySelector("#temperature span");
@@ -35,9 +38,6 @@ const showWeatherData = async (city) =>{
     windCity.innerText = `${data.wind.speed}Km/h`
 
     theme(data.weather[0].description)
-
-
-
     weatherConteiner.classList.remove("hide")
 };
 
@@ -56,6 +56,23 @@ cityInput.addEventListener("keyup", (e)=>{
 
 function theme(descriptionTemp){
     var imgBodyaa = document.getElementById("description").innerText;
+
+    if(imgBodyaa === "céu limpo"){
+        body.style.backgroundImage = "url(../img/background/suny-beach.jpg)" 
+    }else if(imgBodyaa === "nublado"){
+        body.style.backgroundImage = "url(../img/background/cloddy.jpg)"
+    }else if(imgBodyaa === "nuvens dispersas" || imgBodyaa === "algumas nuvens"){
+        body.style.backgroundImage = "url(../img/background/anyClouds.jpg)"
+    }else if(imgBodyaa === "chuva moderada" || imgBodyaa === "chuva leve"){
+        body.style.backgroundImage = "url(../img/background/rain.jpg)"
+
+
+
+    }else if(imgBodyaa === "neblina"){
+        body.style.backgroundImage = "url(../img/background/foggy-forest.jpg)"
+    }else if(imgBodyaa === "nublado"){
+        body.style.backgroundImage = "url(../img/background/cloddy.jpg)"
+    }
     
 }
 
