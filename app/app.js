@@ -13,22 +13,19 @@ const windCity = document.querySelector("#wind span");
 const descriptionCity = document.querySelector("#description");
 const countryBann = document.querySelector("#country");
 
+const weatherConteiner = document.querySelector("#weather-data");
+
 
 searchBtn.addEventListener("click", (e) =>{
-
     const city = cityInput.value;
-
     e.preventDefault()
     showWeatherData(city)
 });
 
 
 const showWeatherData = async (city) =>{
-    const data = await getWeartherData(city);
-    
+    const data = await getWeartherData(city);  
     console.log(data);
-
-
     cityElement.innerText = data.name;
     temperatureCity.innerText = parseInt(data.main.temp);
     descriptionCity.innerText = data.weather[0].description;
@@ -36,15 +33,29 @@ const showWeatherData = async (city) =>{
     countryBann.setAttribute("src", band1 + data.sys.country + band2);
     umidadeCity.innerText = `${data.main.humidity}%`;
     windCity.innerText = `${data.wind.speed}Km/h`
+
+    theme(data.weather[0].description)
+
+
+
+    weatherConteiner.classList.remove("hide")
 };
 
 const getWeartherData = async(city) =>{
-
-    const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`
-
-    const rest = await fetch(apiURL)
-    const data = await rest.json()
-
+    const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
+    const rest = await fetch(apiURL);
+    const data = await rest.json();
     return data;
+};
 
+cityInput.addEventListener("keyup", (e)=>{
+    if(e.code ==="Enter"){
+        const city = e.target.value;
+        showWeatherData(city);}
+})
+
+function theme(descriptionTemp){
+    var imgBodyaa = document.getElementById("description").innerText;
+    
 }
+

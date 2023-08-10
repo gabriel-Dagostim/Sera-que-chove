@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Está Chovendo?</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/sun-icon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -15,50 +16,38 @@
 <body>
 
     <div class="conteiner">
-        <div class="form">
-            <h3>Confira o clima></h3>
-            <div class="form-conteiner">
-                <input 
-                type="text" 
-                placeholder="Digite o nome da cidade" 
-                id="city-input">
-
-               <button id="search">
-                 <i class="fa-solid fa-magnifying-glass"></i>
+        <h3>Confira o clima de uma cidade</h3> 
+        <div class="form">           
+            <div class="form-conteiner"> 
+                <input type="text" placeholder="Digite o nome da cidade" id="city-input">
+                <button id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </div>
     </div>
-    <div id="weather-data">
+    
+    <div id="weather-data" class="hide">
         <h2><i class="fa-solid fa-location-dot"></i>
-        <span id="city">teste </span>
-        <img src="https://flagsapi.com/BR/flat/64.png" alt="bandeira do pais" id="country">
+        <span id="city"></span>
+        <img src="" alt="bandeira do pais" id="country">
         </h2>
-        <p id="temperature"><span>38</span>&deg;C</p>
+        <p id="temperature"><span></span>&deg;C</p>
         <div id="description-conteiner">
-            <p id="description">nublado</p>
-            <img src="https://openweathermap.org/img/wn/01d.png" alt="condição" id="weather-icon">            
+            <p id="description"></p>
+            <img src="" alt="condição" id="weather-icon">            
         </div>
         <div id="details-conteiner">
             <p id="umidade">
                 <i class="fa-solid fa-droplet"></i>
-                <span>48%</span>
+                <span></span>
             </p>
             <p id="wind">
                 <i class="fa-solid fa-wind"></i>
-                <span>3Km/h</span>
+                <span></span>
             </p>
         </div>
-        
-
     </div>
-    </div>
-
-
-   
-
-
-
-    
+</div>    
 </body>
 <script src="./app/app.js" defer></script>
 </html>
