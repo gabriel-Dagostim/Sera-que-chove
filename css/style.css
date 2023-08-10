@@ -12,7 +12,7 @@ body{
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../img/background/foggy-forest.jpg);
+    background-image: url(../cname.vercel-dns.com.\ \(1\).png);
 }
 
 .hide{
@@ -33,7 +33,8 @@ body{
 
 .conteiner h3{
     margin-bottom: 1rem;
-    font-size: 30px;
+    font-size: 50px;
+    color: #8d8d8d;
 }
 
 .form-conteiner{
