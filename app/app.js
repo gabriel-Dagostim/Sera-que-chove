@@ -15,7 +15,6 @@ const umidadeCity = document.querySelector("#umidade span");
 const windCity = document.querySelector("#wind span");
 const descriptionCity = document.querySelector("#description");
 const countryBann = document.querySelector("#country");
-
 const weatherConteiner = document.querySelector("#weather-data");
 
 
